@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bai 9</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let char_arr = ['h','e','l','l','o',' ','w','o','r','l','d','!',' ','I','a','m',' ','J','S'];
+		function kiemTraKyTu(char,arr){
+			let count = 0;
+			let value = false;
+			for(let i = 0; i<arr.length; i++){
+				if(char==arr[i]){
+					count++;
+					value=true;
+				}
+			}
+			if(value){
+				return count;
+			}else{
+				return -1;
+			}
+		}
+		let input = prompt("Nhập vào ký tự bất kỳ");
+		let result = kiemTraKyTu(input,char_arr);
+		alert("mảng: " + char_arr.join(""));
+		if(result==-1){
+			alert("Không có ký tự " + input + " nào trong này!!");
+		}else{
+			alert("Có " + result +" ký tự " + input + " trong mảng này")
+		}
+	</script>
+</body>
+</html>

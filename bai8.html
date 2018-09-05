@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bai8</title>
+</head>
+<body>
+	<h1>Bấm f12 để check chương trình</h1>
+	<script type="text/javascript">
+		let arr = [34,5645,7,54,6,45,7,56,23];
+		function reserveArray(array){
+			let first = 0, last = array.length;
+			while(first<last){
+				let temp = array[first];
+				array[first] = array[last];
+				array[last] = temp;
+				first++;
+				last--;
+			}
+			return array;
+		}
+		console.log(reserveArray(arr));
+	</script>
+</body>
+</html>
